@@ -12,7 +12,11 @@ public class Application {
     public static Application INSTANCE;
 
     public static void main(final String[] args) {
-    	System.out.println("Print message 1");
+    	// TODO Auto-generated method stub
+    				System.out.println("****simple app-2********** ");
+    				System.out.println("Welcome "+args[0]);
+    				System.out.println("************************** ");
+
     }
 
 }
