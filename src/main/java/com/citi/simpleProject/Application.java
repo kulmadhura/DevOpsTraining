@@ -12,7 +12,7 @@ public class Application {
     public static Application INSTANCE;
 
     public static void main(final String[] args) {
-    	System.out.println("Print message");
+    	System.out.println("Print message 1");
     }
 
 }
