@@ -1,1 +1,468 @@
 https://docs.google.com/document/d/1pEBtTCFS2yeaU_fXkKFxUIKcJigVcJPnnmrbq7dUqic/edit?usp=sharing
+
+https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2022-03/R/eclipse-inst-jre-win64.exe
+
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.63/bin/apache-tomcat-9.0.63.zip
+
+package com.citi.training;
+
+public class Sample {
+	public void print()
+	{
+		System.out.println("print method of Sample");
+	}
+}
+
+
+
+package com.citi.training;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Sample sample=new Sample();
+		sample.print();
+	}
+
+}
+
+
+java -classpath test.jar com.citi.training.App
+
+C:\jarfiles>jar tvf second.jar
+
+C:\jarfiles>md second
+
+C:\jarfiles>cd second
+
+C:\jarfiles\second>jar xvf ..\second.jar
+
+
+java -jar second.jar
+
+JSP—-Java Server Pages
+
+<%@page import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Welcome to Jsp</h2>
+<h2>Current and time <%= new Date() %></h2>
+</body>
+</html>
+
+
+http://localhost:8080/TestWebPrj/first.jsp
+
+jar tvf TestWebPrj.war
+
+jar tvf jenkins.war
+
+java -jar jenkins.war
+
+
+
+<build>
+  <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+
+package com.citi.simple;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			System.out.println("*****simple app**********");
+	}
+
+}
+
+
+https://drive.google.com/drive/folders/1Dyp6JvkHVCmQW7kGRxPBYNciEyMM_-xF?usp=sharing
+
+
+java -jar jenkins.war
+
+mvn exec:java -Dexec.mainClass="com.citi.simple.App"
+
+cd C:\Users\Administrator\eclipse-workspace\simpleprj
+
+git init
+
+git add pom.xml
+git add src
+git add target
+
+
+
+git config --global user.email "subramanian@gmail.com"
+git config --global user.name "subramanian"
+
+git commit -a -m "first commit"
+
+
+H/3 * * * *
+
+
+
+git commit -a -m "second commit"
+
+
+
+package com.citi.simple;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			System.out.println("****simple app-2********** ");
+			System.out.println("Welcome "+args[0]);
+			System.out.println("************************** ");
+	}
+
+}
+
+
+
+exec:java -Dexec.mainClass="com.citi.simple.App" -Dexec.args="${empName}"
+
+package com.citi.simple;
+
+public class App1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			System.out.println("printing system property");
+			String country=System.getProperty("country");
+			System.out.println("country is "+country);
+	}
+
+}
+
+
+
+-Dcountry=India
+
+
+C:\Users\Administrator\eclipse-workspace\simpleprj\target\classes>
+
+java com.citi.simple.App1
+
+
+
+clean package  -Dcountry=UK exec:java  -Dexec.mainClass="com.citi.simple.App1" 
+
+
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.citi</groupId>
+  <artifactId>simpleprj</artifactId>
+  <version>${revision}</version>
+  <properties>
+  <revision>1.2.0</revision>
+  </properties>
+  <build>
+  <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  </project>
+
+
+mvn -Drevision=1.3.1 clean package
+
+
+-Drevision="${revisionDetail}" clean package
+
+
+
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+
+wsl --set-default-version 2
+
+
+docker images
+
+docker run hello-world
+
+
+docker info
+
+docker –version
+
+docker pull busybox
+
+docker images
+
+docker run busybox echo "hello"
+
+docker ps
+
+docker ps -a
+
+
+
+
+public class First {
+public static void main(String[] args) {
+	System.out.println("my first docker application");
+}
+}
+
+
+
+FROM  alpine:latest
+Add First.class First.class
+RUN apk --update add openjdk8-jre
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","First"]
+
+
+docker build --tag "docker-myfirst:latest" .
+
+docker images
+
+
+docker run docker-myfirst:latest
+
+
+
+public class Second {
+public static void main(String[] args) {
+	System.out.println("This is my second docker app");
+}
+}
+
+
+
+FROM  alpine:latest
+Add second.jar second-docker-app.jar
+RUN apk --update add openjdk8-jre
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar second-docker-app.jar"]
+
+ren Dockerfile.txt Dockerfile
+
+
+docker build --tag "testjar:latest" .
+
+docker images
+
+FROM  alpine:latest
+Add second.jar second-docker-app.jar
+RUN apk --update add openjdk8-jre
+ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar second-docker-app.jar"]
+
+docker build --tag "testjar:1.2.1" .
+
+docker run testjar:1.2.1
+
+
+docker tag docker-myfirst:latest subramanian111/trainingtest:1.0.0
+
+docker run subramanian111/trainingtest:1.0.0
+
+docker push subramanian111/trainingtest:1.0.0
+
+
+
+docker image rm subramanian111/trainingtest:1.0.0
+
+
+docker pull subramanian111/trainingtest:1.0.0
+
+
+docker run subramanian111/trainingtest:1.0.0
+
+
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.3.0</version>
+</dependency>
+
+
+
+https://drive.google.com/drive/folders/1Dyp6JvkHVCmQW7kGRxPBYNciEyMM_-xF?usp=sharing
+
+
+<packaging>jar</packaging>
+
+jar tvf restprj-0.0.1-SNAPSHOT.jar
+
+
+
+Jar xvf restprj-0.0.1-SNAPSHOT.jar
+
+Type META-INF/MANIFEST.MF
+
+ java -jar restprj-0.0.1-SNAPSHOT.jar
+
+http://localhost:8080/emp
+
+
+
+
+
+
+
+FROM  alpine:latest
+Add restprj-0.0.1-SNAPSHOT.jar docker-rest-app.jar
+RUN apk --update add openjdk8-jre
+ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar docker-rest-app.jar"]
+
+
+docker build --tag empmicroservice:1.0.0 .
+
+docker run -p 8080:8080 -t empmicroservice:1.0.0 --name empimage
+
+docker ps
+
+docker container stop f9aa5e3daa50
+
+
+
+jar tvf restprj-0.0.1-SNAPSHOT.jar
+
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                echo 'Hello World ------build'
+            }
+        }
+        stage('run') {
+            steps {
+                echo 'Hello World--------run'
+            }
+        }
+    }
+}
+
+
+git init
+
+
+git add Jenkinsfile
+
+git commit -a -m "First commit"
+
+
+Test.jenkins
+
+pipeline {
+    agent {
+	docker{
+	   image 'maven:3.8.5-openjdk-18'
+	 }	
+	}
+	
+     stages {
+        stage('Hello') {
+            steps {
+                 echo 'Hello World---using script'
+            }
+        }
+    }	
+    
+}
+
+
+
+
+git add test.jenkins
+
+git commit -a -m "Second commit"
+
+
+package com.citi.simple;
+
+
+class A{
+	private int i;
+	
+	
+	public A(int i) {
+		super();
+		this.i = i;
+	}
+
+
+	@Override
+	protected void finalize() throws Throwable {
+		// TODO Auto-generated method stub
+		System.out.println("garbage collecting the object with value "+i);
+	}
+
+
+	
+}
+public class GCTest {
+public static void main(String[] args) {
+	A a1=new A(10);
+	A a2=new A(25);
+	A a3=a1;//both a3 and a1 point to object with value 10
+	a1=null;//a1 does not point to anything
+	a3=a2;//assigning a2 to a3. both a3 and a2 point to the object with value 25
+	
+	a2=new A(30);//a2 points to object with value 30, a3 points to object with value 25
+	
+	a3=new A(40);//a3 is assigned a new object , so the objects created at line 25 and 26 are eligible for gc
+	System.gc();
+	try {
+		Thread.sleep(1000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+}
+
+
+
+Post test:
+
+ https://app.mymapit.in/code4/tiny/OYd5j2
+
+Feedback link:
+
+https://tcheck.co/Hgv9k3
+
+
+
